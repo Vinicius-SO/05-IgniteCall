@@ -1,6 +1,9 @@
 {
-  "private":"true",
+  "private": "true",
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "devDependencies": {
+    "eslint-plugin-prettier": "^5.0.1"
+  }
 }

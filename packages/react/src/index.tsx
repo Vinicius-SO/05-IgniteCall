@@ -1,6 +1,18 @@
-import { colors } from '@ignite-ui/tokens'
+import {styled} from './styles'
 
-export function App(){
-    return <h1 className='bg-color-red'>Hello world!</h1>
-    
-}
+export const Button = styled('button',{
+    fontFamily: '$default',
+    background: '$gray500',
+    borderRadius: '$md',
+    // padding: '$2 $4',
+    fontWeight: 'bold',
+    color: '$white',
+
+    variants: {
+        color: {
+          gray: {
+            backgroundColor: 'gainsboro',
+          },
+        },
+      },
+})
