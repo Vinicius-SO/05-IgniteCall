@@ -1,3 +1,4 @@
+import { ComponentProps } from 'react'
 import {styled} from './styles'
 
 export const Button = styled('button',{
@@ -9,10 +10,17 @@ export const Button = styled('button',{
     color: '$white',
 
     variants: {
-        color: {
-          gray: {
-            backgroundColor: 'gainsboro',
+        size:{
+          small:{
+            fontSize: 14,
+            padding: '$3 $6'
           },
-        },
-      },
+          big:{
+            fontSize: 14,
+            padding: '$3 $6'
+          }
+        }
+    },
 })
+
+export type ButtonProps = ComponentProps<typeof Button>

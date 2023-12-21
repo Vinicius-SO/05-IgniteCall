@@ -1,10 +1,10 @@
-import { Button } from "@ignite-ui/react"
+// import { Button } from "@ignite-ui/react"
 
 function App() {
 
   return (
     <>
-      <Button color="gray">Button</Button>
+      {/* <Button color="gray">Button</Button> */}
     </>
   )
 }
