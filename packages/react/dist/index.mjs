@@ -121,11 +121,12 @@ var {
 // src/index.tsx
 var Button = styled("button", {
   fontFamily: "$default",
-  background: "$gray500",
+  background: "$ignite500",
   borderRadius: "$md",
   // padding: '$2 $4',
   fontWeight: "bold",
   color: "$white",
+  border: 0,
   variants: {
     size: {
       small: {

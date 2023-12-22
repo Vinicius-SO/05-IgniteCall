@@ -3,19 +3,19 @@ import { Button, ButtonProps } from '@ignite-ui/react'
 
 
 export default {
-  title: 'Button',
+  title: 'Form/Button',
   component: Button,
 
   args: {
     children: 'Enviar',
-    // size: 'small'
+    size: 'small'
   },
 } as Meta<ButtonProps>
 
 export const Primary: StoryObj<ButtonProps> = {}
 
-export const Small: StoryObj<ButtonProps> = {
+export const Big: StoryObj<ButtonProps> = {
   args: {
-    size:'sm'
+    size:'big'
   },
 }
