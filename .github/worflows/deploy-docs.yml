@@ -3,7 +3,7 @@ name: Deploy Docs
 on: 
   Push:
     Branches: 
-      -main
+      -stiches-branch
 
 jobs:
   build-deploy:
