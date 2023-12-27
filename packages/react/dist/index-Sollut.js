@@ -1,6 +1,9 @@
+"use strict";
 var __defProp = Object.defineProperty;
 var __defProps = Object.defineProperties;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
+var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getOwnPropSymbols = Object.getOwnPropertySymbols;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __propIsEnum = Object.prototype.propertyIsEnumerable;
@@ -17,6 +20,28 @@ var __spreadValues = (a, b) => {
   return a;
 };
 var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+
+// src/index.tsx
+var src_exports = {};
+__export(src_exports, {
+  Box: () => Box,
+  Heading: () => Heading,
+  Text: () => Text
+});
+module.exports = __toCommonJS(src_exports);
 
 // ../tokens/dist/index.mjs
 var colors = {
@@ -92,7 +117,7 @@ var lineHeights = {
 };
 
 // src/styles/index.ts
-import { createStitches, defaultThemeMap } from "@stitches/react";
+var import_react = require("@stitches/react");
 var {
   styled,
   css,
@@ -102,8 +127,8 @@ var {
   theme,
   createTheme,
   config
-} = createStitches({
-  themeMap: __spreadProps(__spreadValues({}, defaultThemeMap), {
+} = (0, import_react.createStitches)({
+  themeMap: __spreadProps(__spreadValues({}, import_react.defaultThemeMap), {
     height: "space",
     width: "space"
   }),
@@ -176,123 +201,9 @@ var Heading = styled("h2", {
     size: "md"
   }
 });
-
-// src/components/Avatar/index.tsx
-import { User } from "phosphor-react";
-
-// src/components/Avatar/styles.ts
-import * as Avatar from "@radix-ui/react-avatar";
-var AvatarContainer = styled(Avatar.Root, {
-  borderRadius: "$full",
-  display: "inline-block",
-  width: "$12",
-  height: "$12",
-  overflow: "hidden"
-});
-var AvatarImage = styled(Avatar.Image, {
-  width: "100%",
-  height: "100%",
-  objectFit: "cover",
-  borderRadius: "inherit"
-});
-var AvatarFallback = styled(Avatar.Fallback, {
-  width: "100%",
-  height: "100%",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  backgroundColor: "$gray600",
-  color: "$gray800",
-  svg: {
-    width: "$6",
-    height: "$6"
-  }
-});
-
-// src/components/Avatar/index.tsx
-import { jsx, jsxs } from "react/jsx-runtime";
-function Avatar2(props) {
-  return /* @__PURE__ */ jsxs(AvatarContainer, { children: [
-    /* @__PURE__ */ jsx(AvatarImage, __spreadValues({}, props)),
-    /* @__PURE__ */ jsx(AvatarFallback, { delayMs: 600, children: /* @__PURE__ */ jsx(User, {}) })
-  ] });
-}
-
-// src/components/Button.tsx
-var Button = styled("button", {
-  all: "unset",
-  borderRadius: "$sm",
-  fontSize: "$sm",
-  fontWeight: "$medium",
-  fontFamily: "$default",
-  textAlign: "center",
-  minWidth: 120,
-  boxSizing: "border-box",
-  padding: "0 $4",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  gap: "$2",
-  cursor: "pointer",
-  svg: {
-    width: "$4",
-    height: "$4"
-  },
-  "&:disabled": {
-    cursor: "not-allowed"
-  },
-  variants: {
-    variant: {
-      primary: {
-        color: "$white",
-        background: "$ignite500",
-        "&:not(:disabled):hover": {
-          background: "$ignite300"
-        },
-        "&:disabled": {
-          backgroundColor: "$gray200"
-        }
-      },
-      secondary: {
-        color: "$ignite300",
-        border: "2px solid $ignite500",
-        "&:not(:disabled):hover": {
-          background: "$ignite500",
-          color: "$white"
-        },
-        "&:disabled": {
-          color: "$gray200",
-          borderColor: "$gray200"
-        }
-      },
-      tertiary: {
-        color: "$gray100",
-        "&:not(:disabled):hover": {
-          color: "$white"
-        },
-        "&:disabled": {
-          color: "$gray600"
-        }
-      }
-    },
-    size: {
-      sm: {
-        height: 38
-      },
-      md: {
-        height: 46
-      }
-    }
-  },
-  defaultVariants: {
-    variant: "primary",
-    size: "md"
-  }
-});
-export {
-  Avatar2 as Avatar,
+// Annotate the CommonJS export names for ESM import in node:
+0 && (module.exports = {
   Box,
-  Button,
   Heading,
   Text
-};
+});
