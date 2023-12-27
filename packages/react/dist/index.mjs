@@ -358,6 +358,7 @@ function TextInput(_a) {
     /* @__PURE__ */ jsx2(Input, __spreadValues({}, props))
   ] });
 }
+TextInput.displayName = "TextInput";
 
 // src/components/TextArea.tsx
 var TextArea = styled("textarea", {
