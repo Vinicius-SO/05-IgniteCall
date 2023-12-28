@@ -1,4 +1,4 @@
-// import { Button } from "@ignite-ui/react"
+// import { Button } from "@viniciuso-ui/react"
 
 function App() {
 
